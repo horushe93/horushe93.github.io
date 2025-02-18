@@ -11,6 +11,8 @@
         --text-color: #ffffff;
         --button-color: #3498db;
         --card-bg: rgba(255, 255, 255, 0.1);
+        --social-bg: rgba(83, 105, 33, 1);
+        /* --social-bg: rgba(255, 255, 255, 0.5); */
       }
 
       * {
@@ -81,6 +83,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+        margin-top: 1.5rem;
       }
 
       .project-card {
@@ -133,6 +136,34 @@
         opacity: 1;
       }
 
+      .socials {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin-top: 1.5rem;
+      }
+      .social-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .social-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--social-bg);
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease;
+        text-decoration: none;
+        overflow: hidden;
+      }
+      .social-item:hover {
+        transform: translateY(-5px);
+      }
+
       @media (max-width: 768px) {
         .projects {
           grid-template-columns: 1fr;
@@ -157,6 +188,10 @@
           font-size: 1.5rem;
         }
 
+        .project-card h2 {
+          font-size: 1.2rem;
+        }
+
         .project-card h3 {
           font-size: 1rem;
         }
@@ -177,6 +212,7 @@
         </div>
       </section>
 
+      <h2>Recent Projects</h2>
       <section class="projects">
         <a class="project-card" href="https://flagle.fun">
           <div class="project-header">
@@ -201,6 +237,20 @@
           </div>
           <p>Free GPTOmni provides a free, convenient, user-friendly online chatting UI for AI conversations by model GPT4o.</p>
         </a>
+      </section>
+
+      <h2 style="margin-top: 2rem;">Socials</h2>
+      <section class="socials">
+        <div class="social-card">
+          <a class="social-item" href="https://horushe.mssg.me/" rel="nofollow">
+            <img src="./assets/mssg.svg" alt="mssg.me" />
+          </a>
+        </div>
+        <div class="social-card">
+          <a class="social-item" href="https://linktr.ee/horushe" rel="nofollow">
+            <img src="./assets/linktree.svg" alt="linktree.app" />
+          </a>
+        </div>
       </section>
     </div>
   </body>
